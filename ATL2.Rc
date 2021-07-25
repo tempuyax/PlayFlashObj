@@ -1,0 +1,34 @@
+// ================================================================================================
+// ATL2.rc
+// Title:   Pahor1.asm
+// Author:  Pahor.m  @ April 2020
+// Version: 1.0.0
+// Purpose: includes all necessary resource definitions.
+//          Dipersembahkan Untuk Hari Ulang Tahun ku yg KE-47
+// ================================================================================================
+
+#include "Resource.h" 
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST DISCARDABLE "XpTheme.xml"
+
+
+//#include "Res/DlgMainDlg.rc"
+//#include "Res/DlgMainRes.rc" BS_GROUPBOX
+
+#define IDD_DIALOG 1000
+#define IDC_EDT1 1001 
+#define IDC_BTN1 1002 
+#define IDC_GRP2 1003 
+
+IDD_DIALOG DIALOGEX 6,5,290,218
+CAPTION " SWF Player v0.1 by Pahor. M"
+FONT 8,"MS Sans Serif",0,0
+STYLE WS_POPUP|WS_VISIBLE|WS_CAPTION|WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+BEGIN
+  CONTROL "",IDC_GRP2,"BUTTON",0x50000007,6,186,278,28,0x00000000
+  CONTROL "",IDC_EDT1,"EDIT",ES_AUTOHSCROLL|WS_TABSTOP,14,195,222,13,0x00000200
+  CONTROL "...",IDC_BTN1, "BUTTON", BS_PUSHBUTTON|BS_CENTER|WS_TABSTOP, 242,195,36,13,0x00000000
+END
